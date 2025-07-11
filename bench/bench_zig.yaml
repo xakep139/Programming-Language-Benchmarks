@@ -13,11 +13,12 @@ problems:
     source:
       - 1.zig
       - 2.zig
+      - 3.zig
   - name: spectral-norm
     source:
       - 1.zig
-      - 2.zig
-      - 2-m.zig
+      # - 2.zig
+      # - 2-m.zig
   - name: pidigits
     source:
       - 1.zig
@@ -27,7 +28,7 @@ problems:
   - name: fannkuch-redux
     source:
       - 1.zig
-      - 2.zig
+      # - 2.zig
       - 2-m.zig
       - 3-i.zig
   - name: fasta
@@ -52,6 +53,7 @@ problems:
   - name: knucleotide
     source:
       - 1.zig
+      - 1-m.zig
 compiler_version_command: zig version
 compiler_version_regex:
 runtime_version_parameter:
@@ -63,6 +65,6 @@ environments:
     version: latest
     docker:
     include: zig
-    build: zig build -Dcpu=broadwell --verbose-llvm-cpu-features
+    build: zig build -Dcpu=broadwell # --verbose-llvm-cpu-features
     out_dir: zig-out/bin
     run_cmd: app
